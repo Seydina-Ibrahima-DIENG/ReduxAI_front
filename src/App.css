@@ -1,0 +1,147 @@
+:root {
+  --primary-blue: #2563eb;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --border-color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: white;
+  color: var(--text-main);
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* HEADER */
+.header {
+  padding: 20px 50px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-bolt {
+  background: var(--primary-blue);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.header h1 { margin: 0; font-size: 1.2rem; }
+.subtitle { margin: 0; font-size: 0.8rem; color: var(--text-muted); }
+
+/* MAIN */
+.main-content {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* CARDS */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.card {
+  padding: 30px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.blue-bg { background: #eff6ff; color: #3b82f6; }
+.purple-bg { background: #f5f3ff; color: #8b5cf6; }
+.lightblue-bg { background: #f0f9ff; color: #0ea5e9; }
+
+.card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+/* DROP ZONE */
+.drop-zone {
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  padding: 60px;
+  background: #fdfdfd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drop-zone:hover {
+  border-color: var(--primary-blue);
+  background: #f0f7ff;
+}
+
+.upload-icon { font-size: 40px; color: #94a3b8; margin-bottom: 15px; }
+.upload-text { font-size: 1.2rem; font-weight: 600; margin: 0; }
+.upload-subtext { color: var(--text-muted); margin: 5px 0; }
+.formats { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; }
+
+/* BUTTON */
+.btn-upload {
+  margin-top: 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* STATUS */
+.status-message {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* PROGRESS */
+.progress-container {
+  width: 100%;
+  max-width: 800px;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  margin: 10px auto 30px auto;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary-blue);
+  border-radius: 5px;
+  width: 0%;
+  transition: width 0.2s ease;
+}
